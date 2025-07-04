@@ -9,6 +9,8 @@
 
 import router from '@adonisjs/core/services/router'
 const SessionController = () => import('../app/controllers/auth_controller.js')
+const PersonasController = () => import('../app/controllers/personas_controller.js')
+
 router.get('/', async () => {
   return {
     hello: 'world',
@@ -18,3 +20,5 @@ router.get('/', async () => {
 router.post('/login', [SessionController, 'login'])
 
 router.post('/register', [SessionController, 'register'])
+
+router.get('/getPersonas', [PersonasController, 'index'])
