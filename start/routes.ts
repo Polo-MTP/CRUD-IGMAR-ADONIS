@@ -22,3 +22,9 @@ router.post('/login', [SessionController, 'login'])
 router.post('/register', [SessionController, 'register'])
 
 router.get('/getPersonas', [PersonasController, 'index'])
+
+router.post('/addperson', [PersonasController, 'addPerson'])
+
+router.put('/personas/:id', [PersonasController, 'updatePerson'])
+
+router.delete('/delete/:id', [PersonasController, 'deletePerson'])
